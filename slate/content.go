@@ -236,7 +236,8 @@ func produceTOC(r blackfriday.Renderer, ast *blackfriday.Node) []byte {
 			}
 		}
 		currentLevel = h.Level
-		fmt.Fprintf(&buf, "<li>\n<a href=\"#%s\" class=\"toc-link toc-h%d\">%s</a>\n", h.HeadingID, h.Level, string(h.Title))
+		title := html.EscapeString(string(h.Title))
+		fmt.Fprintf(&buf, "<li>\n<a href=\"#%s\" class=\"toc-h%d toc-link\" data-title=\"%s\">%s</a>\n", h.HeadingID, h.Level, title, title)
 	}
 	for i := 1; i < currentLevel; i++ {
 		fmt.Fprint(&buf, "</li>\n</ul>\n")

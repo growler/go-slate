@@ -646,9 +646,9 @@ var didx = make(map[string]*directoryAsset)
 var stamp time.Time
 
 func init() {
-	stamp = time.Unix(1515851366, 936431000)
-	bb := blob_bytes(179680)
-	bs := blob_string(179680)
+	stamp = time.Unix(1516044723, 537397000)
+	bb := blob_bytes(179792)
+	bs := blob_string(179792)
 	root = &directoryAsset{
 		dirs: []directoryAsset{
 			{
@@ -850,11 +850,11 @@ func init() {
 				files: []Asset{
 					{
 						name:         "layout.tmpl",
-						blob:         bb[147168:149181],
-						str_blob:     bs[147168:149181],
+						blob:         bb[147168:149286],
+						str_blob:     bs[147168:149286],
 						mime:         "application/binary",
-						tag:          "oe3lvasfiqwi4",
-						size:         2013,
+						tag:          "gqa2hcaksx6vq",
+						size:         2118,
 						isCompressed: false,
 					},
 				},
@@ -864,8 +864,8 @@ func init() {
 				files: []Asset{
 					{
 						name:         "_icon-font.scss",
-						blob:         bb[149184:149981],
-						str_blob:     bs[149184:149981],
+						blob:         bb[149288:150085],
+						str_blob:     bs[149288:150085],
 						mime:         "application/binary",
 						tag:          "flig32x2gxww6",
 						size:         797,
@@ -873,8 +873,8 @@ func init() {
 					},
 					{
 						name:         "_normalize.scss",
-						blob:         bb[149984:157910],
-						str_blob:     bs[149984:157910],
+						blob:         bb[150088:158014],
+						str_blob:     bs[150088:158014],
 						mime:         "application/binary",
 						tag:          "7w7nsc2eik5dy",
 						size:         7926,
@@ -882,8 +882,8 @@ func init() {
 					},
 					{
 						name:         "_rtl.scss",
-						blob:         bb[157912:160840],
-						str_blob:     bs[157912:160840],
+						blob:         bb[158016:160944],
+						str_blob:     bs[158016:160944],
 						mime:         "application/binary",
 						tag:          "7ruwsdsbygfls",
 						size:         2928,
@@ -891,8 +891,8 @@ func init() {
 					},
 					{
 						name:         "_variables.scss",
-						blob:         bb[160840:164633],
-						str_blob:     bs[160840:164633],
+						blob:         bb[160944:164737],
+						str_blob:     bs[160944:164737],
 						mime:         "application/binary",
 						tag:          "wv2nchckgitqs",
 						size:         3793,
@@ -900,8 +900,8 @@ func init() {
 					},
 					{
 						name:         "print.css.scss",
-						blob:         bb[164640:167219],
-						str_blob:     bs[164640:167219],
+						blob:         bb[164744:167323],
+						str_blob:     bs[164744:167323],
 						mime:         "application/binary",
 						tag:          "6cazyz5hdscfm",
 						size:         2579,
@@ -909,11 +909,11 @@ func init() {
 					},
 					{
 						name:         "screen.css.scss",
-						blob:         bb[167224:179678],
-						str_blob:     bs[167224:179678],
+						blob:         bb[167328:179785],
+						str_blob:     bs[167328:179785],
 						mime:         "application/binary",
-						tag:          "sbgxuzvafsiig",
-						size:         12454,
+						tag:          "pjh7rum2ujgh6",
+						size:         12457,
 						isCompressed: false,
 					},
 				},

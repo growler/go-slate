@@ -31,11 +31,13 @@
            <img src="images/{{ .Params.Logo }}" class="logo" alt="Logo" />
        {{- end }}
     {{- end }}
+    {{- if gt (len .Params.Langs) 1 }}
     <div class="lang-selector">
-        {{- range .Params.Langs }}
-            <a href="#" data-language-name="{{ . }}">{{.}}</a>
-        {{- end }}
+       {{- range .Params.Langs }}
+           <a href="#" data-language-name="{{ . }}">{{.}}</a>
+       {{- end }}
     </div>
+    {{- end }}
     {{- if .Params.Search }}
     <div class="search">
         <input type="text" class="search" id="input-search" placeholder="Search">
@@ -56,6 +58,7 @@
     <div class="content">
     {{- .Content }}
     </div>
+    {{- if gt (len .Params.Langs) 1 }}
     <div class="dark-box">
         <div class="lang-selector">
         {{- range .Params.Langs }}
@@ -63,6 +66,7 @@
         {{- end }}
         </div>
     </div>
+    {{- end }}
 </div>
 </body>
 </html>
