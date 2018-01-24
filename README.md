@@ -92,7 +92,7 @@ Available commands:
 ## Extact 
 
 ```bash
-go slate extract [directory] [components to extract...]
+go-slate extract [directory] [components to extract...]
 ```
 
 Extracts Slate files bundled with go-slate to a specified directory.
@@ -107,7 +107,7 @@ extracted. The component name might be either file name or one of
 - javascripts
 - images
 
-To list bundled Slate contents, use `go slate extract -l`
+To list bundled Slate contents, use `go-slate extract -l`
 
 ## Rendering commands options
 
