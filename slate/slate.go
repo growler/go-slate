@@ -23,8 +23,8 @@ import (
 	"path"
 )
 
-const GoSlateVersion = "v1.0.0"
-const SlateVersion = "v2.1.0"
+const GoSlateVersion = "v1.0.1"
+const SlateVersion = "v2.3.1"
 
 func copyJavaScripts(fs slate.FileSystem, target *afero.Afero, search bool, minifyJs bool) error {
 	var files []string

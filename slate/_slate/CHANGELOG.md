@@ -1,6 +1,41 @@
 # Changelog
 
-## Version 2.1.0
+## Version 2.3.1
+
+*July 5, 2018*
+
+- Update `sprockets` in `Gemfile.lock` to fix security warnings
+
+## Version 2.3
+
+*July 5, 2018*
+
+- Allows strikethrough in markdown by default.
+- Upgrades jQuery to 3.2.1, thanks to [Tomi Takussaari](https://github.com/TomiTakussaari)
+- Fixes invalid HTML in `layout.erb`, thanks to [Eric Scouten](https://github.com/scouten) for pointing out
+- Hopefully fixes Vagrant memory issues, thanks to [Petter Blomberg](https://github.com/p-blomberg) for the suggestion
+- Cleans HTML in headers before setting `document.title`, thanks to [Dan Levy](https://github.com/justsml)
+- Allows trailing whitespace in markdown files, thanks to [Samuel Cousin](https://github.com/kuzyn)
+- Fixes pushState/replaceState problems with scrolling not changing the document hash, thanks to [Andrey Fedorov](https://github.com/anfedorov)
+- Removes some outdated examples, thanks [@al-tr](https://github.com/al-tr), [Jerome Dahdah](https://github.com/jdahdah), and [Ricardo Castro](https://github.com/mccricardo)
+- Fixes `nav-padding` bug, thanks [Jerome Dahdah](https://github.com/jdahdah)
+- Code style fixes thanks to [Sebastian Zaremba](https://github.com/vassyz)
+- Nokogiri version bump thanks to [Grey Baker](https://github.com/greysteil)
+- Fix to default `index.md` text thanks to [Nick Busey](https://github.com/NickBusey)
+
+Thanks to everyone who contributed to this release!
+
+## Version 2.2
+
+*January 19, 2018*
+
+- Fixes bugs with some non-roman languages not generating unique headers
+- Adds editorconfig, thanks to [Jay Thomas](https://github.com/jaythomas)
+- Adds optional `NestingUniqueHeadCounter`, thanks to [Vladimir Morozov](https://github.com/greenhost87)
+- Small fixes to typos and language, thx [Emir Ribić](https://github.com/ribice), [Gregor Martynus](https://github.com/gr2m), and [Martius](https://github.com/martiuslim)!
+- Adds links to Spectrum chat for questions in README and ISSUE_TEMPLATE
+
+## Version 2.1
 
 *October 30, 2017*
 
@@ -10,7 +45,7 @@
 
 Thanks to everyone who submitted PRs for this version!
 
-## Version 2.0.0
+## Version 2.0
 
 *July 17, 2017*
 
@@ -30,7 +65,7 @@ Thanks to everyone who submitted PRs for this version!
 
 Thanks to everyone who helped debug or wrote code for this version! It was a serious community effort, and I couldn't have done it alone.
 
-## Version 1.5.0
+## Version 1.5
 
 *February 23, 2017*
 
@@ -39,7 +74,7 @@ Thanks to everyone who helped debug or wrote code for this version! It was a ser
 - Switch default code highlighting color scheme to better highlight JSON
 - Various small typo and bug fixes
 
-## Version 1.4.0
+## Version 1.4
 
 *November 24, 2016*
 
