@@ -3,25 +3,25 @@ package slate
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"github.com/alecthomas/chroma"
 	chroma_html "github.com/alecthomas/chroma/formatters/html"
 	"github.com/alecthomas/chroma/lexers"
 	"github.com/alecthomas/chroma/styles"
-	"gopkg.in/russross/blackfriday.v2"
-	"gopkg.in/yaml.v2"
-	"html"
-	"io/ioutil"
-	"path/filepath"
-	"sort"
-	"text/template"
-	"reflect"
-	"encoding/json"
+	"github.com/growler/go-slate/slate/internal/slate"
+	"github.com/russross/blackfriday/v2"
 	"github.com/spf13/afero"
 	"github.com/tdewolff/minify"
 	minify_html "github.com/tdewolff/minify/html"
-	"github.com/growler/go-slate/slate/internal/slate"
+	"gopkg.in/yaml.v2"
+	"html"
+	"io/ioutil"
 	"path"
+	"path/filepath"
+	"reflect"
+	"sort"
+	"text/template"
 )
 
 type ContentParams struct {
@@ -160,7 +160,7 @@ func load(fs slate.FileSystem, params Params) (*content, error) {
 		return nil, err
 	}
 	for _, include := range ret.Params.Includes {
-		inc, err := fs.Open(path.Join("includes", "_" + include + ".md"))
+		inc, err := fs.Open(path.Join("includes", "_"+include+".md"))
 		if err != nil {
 			return nil, err
 		}
@@ -190,8 +190,8 @@ func load(fs slate.FileSystem, params Params) (*content, error) {
 	con := produceHTML(htmlRenderer, ast)
 	buf.Reset()
 	err = tmpl.Execute(&buf, map[string]interface{}{
-		"Params": &ret.Params,
-		"TOC": string(toc),
+		"Params":  &ret.Params,
+		"TOC":     string(toc),
 		"Content": string(con),
 	})
 	ret.html = buf.Bytes()
